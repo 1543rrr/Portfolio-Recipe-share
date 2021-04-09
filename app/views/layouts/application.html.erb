@@ -12,13 +12,13 @@
   </head>
 
   <body>
-    <%# <nav> %>
-    <%# <%= render 'partial/navbar' %>
-    <%# </nav> %>
-    <%= render 'shared/header' %>
+    <nav>
+     <%= render 'partial/navbar' %>
+     <%= render 'shared/header' %>
+    </nav>
         <%= yield %>
-        <p id="test">テスト</p>
-    <p class="hoge">テスト</p>
+        <p id="test"></p>
+    <p class="hoge"></p>
   </body>
 </html>
 
