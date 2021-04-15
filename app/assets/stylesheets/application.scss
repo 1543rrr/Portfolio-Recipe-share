@@ -1,4 +1,6 @@
  @import 'bootstrap/scss/bootstrap';
-//  @import "layouts/navbar";
+ @import 'layouts/navbar';
 
-// @import 'header.scss';
+ @import "common";
+ @import "users/devise";
+ @import "pages";

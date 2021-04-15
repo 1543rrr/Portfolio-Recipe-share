@@ -22,3 +22,48 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## comments table
+|comment|
+|post_id|
+|user_id|
+
+### Association
+-  has_one :posts
+-  has_one :users
+
+## photos table
+|image|
+|post_id|
+
+### Association
+- belong_to :posts
+
+## posts table
+|caption|
+|user_id|
+
+### Association
+- has_many :comments
+- has_one  :photos
+- has_many :likes
+
+## likes table
+|post_id|
+|user_id|
+
+### Association
+- has_one  :posts
+- has_one :users
+
+## users table
+|name                 |string|null:false|
+|nickname             |string|null:false|
+|email                |string|null:false|
+|password             |string|null:false|
+|password_confirmation|string|null:false|
+
+### Association
+- has_many :comments
+- has_many :posts
+- has_many :likes
