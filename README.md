@@ -58,11 +58,20 @@ Things you may want to cover:
 
 ## users table
 |name                 |string|null:false|
+<<<<<<< Updated upstream
 |nickname             |string|null:false|
 |email                |string|null:false|
 |password             |string|null:false|
 |password_confirmation|string|null:false|
 
+=======
+|email                |string|null:false|
+|password             |string|null:false|
+|password_confirmation|string|null:false|
+|confirmation_token   |sting |null:false|
+|confirmed_at         |string|null:false|
+|confirmation_sent
+>>>>>>> Stashed changes
 ### Association
 - has_many :comments
 - has_many :posts
