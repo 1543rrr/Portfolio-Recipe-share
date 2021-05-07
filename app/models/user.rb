@@ -2,12 +2,16 @@ class User < ApplicationRecord
        
        has_many :posts, dependent: :destroy
        has_many :likes
+       has_many :comments
        # Include default devise modules. Others available are:
        # :confirmable, :lockable, :timeoutable and :omniauthable
        devise :database_authenticatable, :registerable,
               :recoverable, :rememberable, :validatable
      
        validates :name, presence: true, length: { maximum: 50 }
+       def liked_by?(post_id)
+              likes.where(post_id: post_id).exists?
+            end
      
        def update_without_current_password(params, *options)
 
