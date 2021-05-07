@@ -33,15 +33,15 @@ Things you may want to cover:
 -  has_one :users
 
 ## photos table
-|image|
-|post_id|
+|image|string|
+|post_id|references|
 
 ### Association
 - belong_to :posts
 
 ## posts table
-|caption|
-|user_id|
+|caption| string|
+|user_id|references|
 
 ### Association
 - has_many :comments
