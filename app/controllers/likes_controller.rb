@@ -5,10 +5,6 @@ class LikesController < ApplicationController
       @likes = current_user.likes.build(like_params)
       @post = @like.post
       if @like.save
-<<<<<<< Updated upstream
-=======
-        # redirect_to like_path
->>>>>>> Stashed changes
         respond_to :js
       end
     end
